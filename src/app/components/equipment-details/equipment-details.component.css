@@ -1,0 +1,21 @@
+.equipment-container {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #cccbcb;
+  align-items: center;
+  color: #59595c;
+  width: 600px;
+  white-space: nowrap;
+}
+
+.equipment-detail-header {
+  width: 50%;
+  padding: 7px;
+}
+
+.equipment-detail {
+  padding: 7px;
+  width: 50%;
+  align-content: center;
+}
+

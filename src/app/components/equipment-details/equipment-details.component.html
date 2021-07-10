@@ -1,1 +1,33 @@
-<p>equipment-details works!</p>
+
+<div>
+
+  <div class="equipment-container" *ngIf="resultEquipments != undefined && resultEquipments.length > 0">
+    <div>
+      <div class="equipment-container">
+        <div class="equipment-detail-header">Equipment Number</div>
+        <div class="equipment-detail-header">Address</div>
+        <div class="equipment-detail-header">Contract Start Date</div>
+        <div class="equipment-detail-header">Contract Start Date</div>
+        <div class="equipment-detail-header">Status</div>
+      </div>
+    </div>
+  </div>
+  <div *ngFor="let equipment of resultEquipments">
+    <div class="equipment-container">
+      <div *ngIf="equipment">
+        <div class="equipment-container">
+          <div class="equipment-detail">{{equipment.equipmentNumber}}</div>
+          <div *ngIf="equipment.address">
+            <div class="equipment-detail">{{equipment.address.streetName}}</div>
+            <div class="equipment-detail">{{equipment.address.postalCode}}</div>
+            <div class="equipment-detail">{{equipment.address.city}}</div>
+            <div class="equipment-detail">{{equipment.address.country}}</div>
+          </div>
+          <div class="equipment-detail">{{equipment.contractStartDate}}</div>
+          <div class="equipment-detail">{{equipment.contractEndDate}}</div>
+          <div class="equipment-detail">{{equipment.status}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
